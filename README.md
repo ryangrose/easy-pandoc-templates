@@ -7,7 +7,7 @@ A collection of pandoc templates that can be dropped in with no dependencies.
 To install, copy the given template to `~/.pandoc/templates`. If installing
 via git, be sure to link the files properly.
 
-## filewatcher
+### filewatcher
 
 [filewatcher](https://github.com/thomasfl/filewatcher) is a ruby gem that
 automatically executes a given command when a file changes. Using this
@@ -27,8 +27,7 @@ curl 'https://raw.githubusercontent.com/ryangrose/pandoc_templates/master/html/u
 
 Usage:
 
-Don't forget to include --toc for table of contents
-
 ```
 pandoc source.md -o destination.html --template=uikit.html --toc
 ```
+Don't forget to include --toc for table of contents

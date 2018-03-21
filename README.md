@@ -4,7 +4,8 @@ A collection of pandoc templates that can be dropped in with no dependencies.
 
 ## installation
 
-To install, copy the given template to `~/.pandoc/templates`
+To install, copy the given template to `~/.pandoc/templates`. If installing
+via git, be sure to link the files properly.
 
 ## filewatcher
 

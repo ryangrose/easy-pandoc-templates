@@ -25,6 +25,8 @@ Installation:
 curl 'https://raw.githubusercontent.com/ryangrose/pandoc_templates/master/html/uikit.html' > ~/.pandoc/templates
 ```
 
+Usage:
+
 Don't forget to include --toc for table of contents
 
 ```

@@ -7,3 +7,5 @@
 - [Github](https://gist.github.com/dashed/6714393)
 - Letter
 - Resume
+
+[headers?](https://devilgate.org/blog/2012/07/02/tip-using-pandoc-to-create-truly-standalone-html-files/)

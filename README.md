@@ -19,6 +19,8 @@ needs to be done by hand.
 
 ### uikit
 
+[Preview](http://htmlpreview.github.io/?https://github.com/ryangrose/easy-pandoc-templates/blob/master/samples/uikit_sample.html)
+
 Installation:
 
 ```

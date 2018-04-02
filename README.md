@@ -15,6 +15,13 @@ with pandoc provides a convenient way to view the compiled file in real
 time. *Note:* the browser doesn't auto refresh on file change, so that still
 needs to be done by hand.
 
+### vim
+
+Want to preview your markdown file instantly in the browser? Add the following line to your .vimrc to bind Ctrl-m to compiling vim's current file and displaying it in firefox.
+
+``` vimscript
+noremap <C-M> :! pandoc '%:p' -o /tmp/vim_md_page.html --toc --template=uikit.html && firefox /tmp/vim_md_page.html &<CR><CR>
+```
 ## html
 
 ### uikit

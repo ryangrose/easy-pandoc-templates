@@ -7,6 +7,7 @@
 - [Github](https://gist.github.com/dashed/6714393)
 - [fancy css](https://gist.github.com/killercup/5917178)
 - [plain color](http://s3.jfh.me/css/john-full.css)
+- [minimal?](https://gist.github.com/ryangray/1882525)
 - Letter
 - Resume
 

@@ -131,7 +131,7 @@ needs to be done by hand.
 Look at [filewatcher's docs](https://github.com/thomasfl/filewatcher) for more info
 
 ```
-filewatcher README.md 'pandoc README.md -o README.html --template=bootstrap_menu.html
+filewatcher README.md 'pandoc README.md -o README.html --template=bootstrap_menu.html'
 ```
 
 ### vim

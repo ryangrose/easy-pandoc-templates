@@ -7,6 +7,14 @@ A collection of pandoc templates that can be dropped in with no dependencies, bu
 
 [Live Demo](http://htmlpreview.github.io/?https://github.com/ryangrose/easy-pandoc-templates/blob/master/samples/elegant_bootstrap_menu_sample.html)
 
+## quick start
+
+```
+curl 'https://raw.githubusercontent.com/ryangrose/easy-pandoc-templates/master/html/easy_template.html' > ~/.pandoc/templates
+```
+
+## motivation
+
 I was tired of how complicated making a nice-looking html page with pandoc was, so I made this to simplify it.
 CSS files were a good start, but to use anything more complicated (such as bootstrap or javascript files) I needed templates.
 The problem was that most templates used static references to local files, which required that the file you're writing be in the same

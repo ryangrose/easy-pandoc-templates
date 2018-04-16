@@ -12,7 +12,7 @@ A collection of pandoc templates that can be dropped in with no dependencies, bu
 #### install
 
 ``` bash
-curl 'https://raw.githubusercontent.com/ryangrose/easy-pandoc-templates/master/html/easy_template.html' > ~/.pandoc/templates
+curl 'https://raw.githubusercontent.com/ryangrose/easy-pandoc-templates/master/html/easy_template.html' > ~/.pandoc/templates/easy_template.html
 ```
 
 #### usage
@@ -55,7 +55,7 @@ via git, be sure to link the files properly.
 For example:
 
 ```
-curl '<url to raw html template in this repo>' > ~/.pandoc/templates
+curl '<url to raw html template in this repo>' > ~/.pandoc/templates/<template name>
 ```
 
 ## gallery
@@ -71,7 +71,7 @@ A nice looking responsive template using bootstrap. Can create a nice table of c
 Installation:
 
 ```
-curl 'https://raw.githubusercontent.com/ryangrose/pandoc_templates/master/html/elegant_bootstrap_menu.html' > ~/.pandoc/templates
+curl 'https://raw.githubusercontent.com/ryangrose/pandoc_templates/master/html/elegant_bootstrap_menu.html' > ~/.pandoc/templates/elegant_bootstrap_menu.html
 ```
 
 Usage:
@@ -89,7 +89,7 @@ pandoc source.md -o destination.html --template=elegant_bootstrap_menu.html --to
 Installation:
 
 ```
-curl 'https://raw.githubusercontent.com/ryangrose/pandoc_templates/master/html/uikit.html' > ~/.pandoc/templates
+curl 'https://raw.githubusercontent.com/ryangrose/pandoc_templates/master/html/uikit.html' > ~/.pandoc/templates/uikit.html
 ```
 
 Usage:
@@ -109,7 +109,7 @@ A nice looking responsive template using bootstrap. Can create a nice table of c
 Installation:
 
 ```
-curl 'https://raw.githubusercontent.com/ryangrose/pandoc_templates/master/html/bootstrap_menu.html' > ~/.pandoc/templates
+curl 'https://raw.githubusercontent.com/ryangrose/pandoc_templates/master/html/bootstrap_menu.html' > ~/.pandoc/templates/bootstrap_menu.html
 ```
 
 Usage:

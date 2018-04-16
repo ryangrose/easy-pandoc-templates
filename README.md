@@ -9,8 +9,18 @@ A collection of pandoc templates that can be dropped in with no dependencies, bu
 
 ## quick start
 
-```
+#### install
+
+``` bash
 curl 'https://raw.githubusercontent.com/ryangrose/easy-pandoc-templates/master/html/easy_template.html' > ~/.pandoc/templates
+```
+
+#### usage
+
+``` bash
+# pandoc source.md -o destination.html --template=easy_template.html
+
+pandoc 'https://raw.githubusercontent.com/jgm/pandoc/master/MANUAL.txt' -o sample.html -f markdown --template html.template --toc
 ```
 
 ## motivation
@@ -48,31 +58,7 @@ For example:
 curl '<url to raw html template in this repo>' > ~/.pandoc/templates
 ```
 
-## extras
-
-### auto-updating
-
-[filewatcher](https://github.com/thomasfl/filewatcher) is a ruby gem that
-automatically executes a given command when a file changes. Using this
-with pandoc provides a convenient way to view the compiled file in real
-time. *Note:* the browser doesn't auto refresh on file change, so that still
-needs to be done by hand.
-
-Look at [filewatcher's docs](https://github.com/thomasfl/filewatcher) for more info
-
-```
-filewatcher README.md 'pandoc README.md -o README.html --template=bootstrap_menu.html
-```
-
-### vim
-
-Want to preview your markdown file instantly in the browser? Add the following line to your .vimrc to bind Ctrl-m to compile vim's current file and display it in firefox.
-Feel free to change the template as you please
-
-``` vimscript
-noremap <C-M> :! pandoc '%:p' -o /tmp/vim_md_page.html --toc --template=elegant_bootstrap.html && firefox /tmp/vim_md_page.html &<CR><CR>
-```
-## html examples
+## gallery
 
 ### elegant bootstrap
 
@@ -132,3 +118,27 @@ Usage:
 pandoc source.md -o destination.html --template=bootstrap_menu.html --toc
 ```
 
+## extras
+
+### auto-updating
+
+[filewatcher](https://github.com/thomasfl/filewatcher) is a ruby gem that
+automatically executes a given command when a file changes. Using this
+with pandoc provides a convenient way to view the compiled file in real
+time. *Note:* the browser doesn't auto refresh on file change, so that still
+needs to be done by hand.
+
+Look at [filewatcher's docs](https://github.com/thomasfl/filewatcher) for more info
+
+```
+filewatcher README.md 'pandoc README.md -o README.html --template=bootstrap_menu.html
+```
+
+### vim
+
+Want to preview your markdown file instantly in the browser? Add the following line to your .vimrc to bind Ctrl-m to compile vim's current file and display it in firefox.
+Feel free to change the template as you please
+
+``` vimscript
+noremap <C-M> :! pandoc '%:p' -o /tmp/vim_md_page.html --toc --template=elegant_bootstrap.html && firefox /tmp/vim_md_page.html &<CR><CR>
+```

@@ -14,8 +14,7 @@ directory as these files. In other words, you were forced to write your document
 
 To solve this, I turned to the ubiquity of CDNs and github. I began by converting the static references to css, js, etc files to
 ones loaded via CDN in the html head block.
-This made the templates and created files portable as well as always up to date since the CDN (rawgit) ultimately pulls from
-Github.
+This made the templates portable as well as always up-to-date since the CDN (rawgit) pulls from Github.
 
 ## usage
 

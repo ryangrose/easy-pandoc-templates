@@ -29,9 +29,9 @@ pandoc 'https://raw.githubusercontent.com/jgm/pandoc/master/MANUAL.txt' -f markd
 
 ## motivation
 
-I was tired of how complicated making a nice-looking html page with pandoc was, so I made this to simplify it.
+I was tired of how complicated making a nice-looking html page with pandoc was, so I decided to simplify it.
 CSS files were a good start, but to use anything more complicated (such as bootstrap or javascript files) I needed templates.
-The problem was that most templates used static references to local files, which required that the file you're writing be in the same
+The problem was that most templates used static references to local files, which required the file to be in the same
 directory as these files. In other words, you were forced to write your documents in the cloned repo directory.
 
 To solve this, I turned to the ubiquity of CDNs and github. I began by converting the static references to css, js, etc files to

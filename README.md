@@ -88,7 +88,7 @@ A nice looking responsive template using bootstrap. Can create a nice table of c
 
 ![](https://raw.githubusercontent.com/ryangrose/easy-pandoc-templates/master/samples/screenshots/uikit.png)
 
-[Preview](http://htmlpreview.github.io/?https://github.com/ryangrose/easy-pandoc-templates/blob/master/samples/uikit_sample.html)
+[Live Demo](http://htmlpreview.github.io/?https://github.com/ryangrose/easy-pandoc-templates/blob/master/samples/uikit_sample.html)
 
 ### bootstrap
 

@@ -126,3 +126,7 @@ noremap <C-M> :! pandoc '%:p' -o /tmp/'%:p:t'.html --template=easy_template.html
 # For chrome
 noremap <C-M> :! pandoc '%:p' -o /tmp/'%:p:t'.html --template=easy_template.html --toc && google-chrome /tmp/'%:p:t'.html &<CR><CR>
 ```
+
+## contributing
+
+It's a simple concept, so if you've got an idea send me a pull request! You can also see [a primitive roadmap](https://github.com/ryangrose/easy-pandoc-templates/blob/master/roadmap.md) for ideas

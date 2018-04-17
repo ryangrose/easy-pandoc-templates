@@ -120,7 +120,9 @@ Want to preview your markdown file instantly in the browser? Add the following l
 Feel free to change the template as you please
 
 ``` vimscript
+# For firefox
 noremap <C-M> :! pandoc '%:p' -o /tmp/'%:p:t'.html --template=easy_template.html --toc && firefox /tmp/'%:p:t'.html &<CR><CR>
-```
 
-Chrome users replace `firefox` with `google-chrome`
+# For chrome
+noremap <C-M> :! pandoc '%:p' -o /tmp/'%:p:t'.html --template=easy_template.html --toc && google-chrome /tmp/'%:p:t'.html &<CR><CR>
+```

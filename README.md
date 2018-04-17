@@ -1,6 +1,6 @@
 # easy pandoc templates
 
-A collection of portable pandoc templates that can be dropped in with no dependencies, builds, or scripts 
+A collection of portable pandoc templates with no dependencies
 
 requires [pandoc](https://pandoc.org/installing.html)
 

@@ -1,3 +1,4 @@
+cd /tmp
 git clone https://github.com/ryangrose/easy-pandoc-templates.git
 cd easy-pandoc-templates/html
 mkdir -p ~/.pandoc/templates

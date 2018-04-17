@@ -12,7 +12,8 @@ A collection of pandoc templates that can be dropped in with no dependencies, bu
 #### install
 
 ``` bash
-curl 'https://raw.githubusercontent.com/ryangrose/easy-pandoc-templates/master/html/easy_template.html' > ~/.pandoc/templates/easy_template.html
+# Clones repo to /tmp and copies templates to ~/.pandoc/templates
+curl 'https://raw.githubusercontent.com/ryangrose/easy-pandoc-templates/master/remote_install.sh' | bash
 ```
 
 #### usage

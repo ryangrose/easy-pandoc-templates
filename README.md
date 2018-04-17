@@ -1,6 +1,6 @@
 # easy pandoc templates
 
-A collection of pandoc templates that can be dropped in with no dependencies, builds, or scripts 
+A collection of portable pandoc templates that can be dropped in with no dependencies, builds, or scripts 
 
 requires [pandoc](https://pandoc.org/installing.html)
 
@@ -16,7 +16,7 @@ requires [pandoc](https://pandoc.org/installing.html)
 ``` bash
 # Clones repo to /tmp and copies templates to ~/.pandoc/templates
 
-curl 'https://raw.githubusercontent.com/ryangrose/easy-pandoc-templates/master/remote_install.sh' | bash
+curl 'https://raw.githubusercontent.com/ryangrose/easy-pandoc-templates/master/copy_templates.sh' | bash
 ```
 
 #### usage

@@ -2,6 +2,8 @@
 
 A collection of pandoc templates that can be dropped in with no dependencies, builds, or scripts 
 
+requires [pandoc](https://pandoc.org/installing.html)
+
 #### Screenshot
 ![](https://raw.githubusercontent.com/ryangrose/easy-pandoc-templates/master/samples/screenshots/elegant_bootstrap_menu.png)
 
@@ -13,15 +15,16 @@ A collection of pandoc templates that can be dropped in with no dependencies, bu
 
 ``` bash
 # Clones repo to /tmp and copies templates to ~/.pandoc/templates
+
 curl 'https://raw.githubusercontent.com/ryangrose/easy-pandoc-templates/master/remote_install.sh' | bash
 ```
 
 #### usage
 
 ``` bash
-# pandoc source.md -o destination.html --template=easy_template.html
+# pandoc source.md -o destination.html --template=template_name.html
 
-pandoc 'https://raw.githubusercontent.com/jgm/pandoc/master/MANUAL.txt' -o sample.html -f markdown --template html.template --toc
+pandoc 'https://raw.githubusercontent.com/jgm/pandoc/master/MANUAL.txt' -f markdown -o sample.html --template=easy_template.html --toc
 ```
 
 ## motivation
@@ -37,11 +40,15 @@ This made the templates portable as well as always up-to-date since the CDN (raw
 
 ## usage
 
-Use it just like any other pandoc template, but don't worry about where the necessary files are
+Use it just like any other pandoc template, but don't worry about where the extraneous files are (like css, js, etc)
 
-```
+``` bash
+# pandoc source.md -o destination.html --template=template_name.html
+
 pandoc source.md -o destination.html --template=easy_template.html
 ```
+
+Pandoc will look in `~/.pandoc/templates` for files with the template name.
 
 Don't forget to add `--toc` if you want a table of contents.
 
@@ -50,13 +57,20 @@ into the final document. See [the pandoc manual for more info](https://pandoc.or
 
 ## installation
 
-To install, copy the given template to `~/.pandoc/templates`. If installing
-via git, be sure to link the files properly.
+To install all the templates:
 
-For example:
+``` bash
+# Clones repo to /tmp and copies templates to ~/.pandoc/templates
 
+curl 'https://raw.githubusercontent.com/ryangrose/easy-pandoc-templates/master/remote_install.sh' | bash
 ```
-curl '<url to raw html template in this repo>' > ~/.pandoc/templates/<template name>
+
+To install a single template, copy the given template to `~/.pandoc/templates`.
+
+``` bash
+# curl '<url to raw html template in this repo>' > ~/.pandoc/templates/<template name>
+
+curl 'https://raw.githubusercontent.com/ryangrose/easy-pandoc-templates/master/html/easy_template.html' > ~/.pandoc/templates/easy_template.html
 ```
 
 ## gallery
@@ -69,35 +83,12 @@ A nice looking responsive template using bootstrap. Can create a nice table of c
 
 [Live Demo](http://htmlpreview.github.io/?https://github.com/ryangrose/easy-pandoc-templates/blob/master/samples/elegant_bootstrap_menu_sample.html)
 
-Installation:
-
-```
-curl 'https://raw.githubusercontent.com/ryangrose/pandoc_templates/master/html/elegant_bootstrap_menu.html' > ~/.pandoc/templates/elegant_bootstrap_menu.html
-```
-
-Usage:
-
-```
-pandoc source.md -o destination.html --template=elegant_bootstrap_menu.html --toc
-```
 
 ### uikit
 
 ![](https://raw.githubusercontent.com/ryangrose/easy-pandoc-templates/master/samples/screenshots/uikit.png)
 
 [Preview](http://htmlpreview.github.io/?https://github.com/ryangrose/easy-pandoc-templates/blob/master/samples/uikit_sample.html)
-
-Installation:
-
-```
-curl 'https://raw.githubusercontent.com/ryangrose/pandoc_templates/master/html/uikit.html' > ~/.pandoc/templates/uikit.html
-```
-
-Usage:
-
-```
-pandoc source.md -o destination.html --template=uikit.html --toc
-```
 
 ### bootstrap
 
@@ -106,18 +97,6 @@ A nice looking responsive template using bootstrap. Can create a nice table of c
 ![](https://raw.githubusercontent.com/ryangrose/easy-pandoc-templates/master/samples/screenshots/bootstrap_menu.png)
 
 [Live Demo](http://htmlpreview.github.io/?https://github.com/ryangrose/easy-pandoc-templates/blob/master/samples/bootstrap_menu.html)
-
-Installation:
-
-```
-curl 'https://raw.githubusercontent.com/ryangrose/pandoc_templates/master/html/bootstrap_menu.html' > ~/.pandoc/templates/bootstrap_menu.html
-```
-
-Usage:
-
-```
-pandoc source.md -o destination.html --template=bootstrap_menu.html --toc
-```
 
 ## extras
 
@@ -141,7 +120,7 @@ Want to preview your markdown file instantly in the browser? Add the following l
 Feel free to change the template as you please
 
 ``` vimscript
-noremap <C-M> :! pandoc '%:p' -o /tmp/vim_md_page.html --toc --template=elegant_bootstrap.html && firefox /tmp/vim_md_page.html &<CR><CR>
+noremap <C-M> :! pandoc '%:p' -o /tmp/'%:p:t'.html --template=easy_template.html --toc && firefox /tmp/'%:p:t'.html &<CR><CR>
 ```
 
 Chrome users replace `firefox` with `google-chrome`

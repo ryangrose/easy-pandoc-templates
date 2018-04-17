@@ -142,3 +142,5 @@ Feel free to change the template as you please
 ``` vimscript
 noremap <C-M> :! pandoc '%:p' -o /tmp/vim_md_page.html --toc --template=elegant_bootstrap.html && firefox /tmp/vim_md_page.html &<CR><CR>
 ```
+
+Chrome users replace `firefox` with `google-chrome`

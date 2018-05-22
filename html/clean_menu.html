@@ -10,6 +10,8 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
 
     <link href="https://fonts.googleapis.com/css?family=Domine|Montserrat" rel="stylesheet"> 
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     <!-- <link rel="stylesheet" type="text/css" href="template.css" /> -->
     <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/diversen/pandoc-bootstrap-adaptive-template/959c3622/template.css" />
 
@@ -19,16 +21,11 @@
     <!-- <script type='text/javascript' src='menu/js/jquery.cookie.js'></script> -->
     <!-- <script type='text/javascript' src='menu/js/jquery.hoverIntent.minified.js'></script> -->
     <!-- <script type='text/javascript' src='menu/js/jquery.dcjqaccordion.2.7.min.js'></script> -->
-
     <!-- <link href="menu/css/skins/blue.css" rel="stylesheet" type="text/css" /> -->
     <!-- <link href="menu/css/skins/graphite.css" rel="stylesheet" type="text/css" /> -->
     <!-- <link href="menu/css/skins/grey.css" rel="stylesheet" type="text/css" /> -->
-  
     <!-- <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
-        
-  
     <!-- <script src="script.js"></script> -->
-  
     <!-- <script src="jquery.sticky-kit.js "></script> -->
     <script type='text/javascript' src='https://cdn.rawgit.com/diversen/pandoc-bootstrap-adaptive-template/959c3622/menu/js/jquery.cookie.js'></script>
     <script type='text/javascript' src='https://cdn.rawgit.com/diversen/pandoc-bootstrap-adaptive-template/959c3622/menu/js/jquery.hoverIntent.minified.js'></script>
@@ -53,7 +50,7 @@ $if(date-meta)$
 $endif$
   <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
   <style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">body { font-family: Domine, Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif} h1, h2, h3, h4, h5, h6 { font-family: Montserrat, sans }</style>
+  <style type="text/css">body { font-family: Domine, Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif} h1, h2, h3, h4, h5, h6 { font-family: Montserrat, sans }</style>
 $if(quotes)$
   <style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>
 $endif$
@@ -76,8 +73,8 @@ $endfor$
 
     
   $if(title)$
-  <div class="navbar navbar-static-top">
-    <div class="navbar-inner">
+  <div class="navbar navbar-static-top navbar-expand-sm px-0 pt-0">
+    <div class="navbar-inner container-fluid">
       <div class="container">
         <span class="doc-title">$title$</span>
         <ul class="nav pull-right doc-info">
@@ -91,11 +88,13 @@ $endfor$
       </div>
     </div>
   </div>
-  $endif$
   <div class="container">
+  $else$
+  <div class="container mt-5">
+  $endif$
     <div class="row">
       $if(toc)$
-      <div id="$idprefix$TOC" class="span3">
+      <div id="$idprefix$TOC" class="col-3">
         <div class="well toc">
 
         $toc$
@@ -103,7 +102,7 @@ $endfor$
         </div>
       </div>
       $endif$
-      <div class="span$if(toc)$9$else$12$endif$">
+      <div class="col-$if(toc)$9$else$12$endif$">
       $for(include-before)$
       $include-before$
       $endfor$

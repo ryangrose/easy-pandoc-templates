@@ -62,7 +62,7 @@ To install all the templates:
 ``` bash
 # Clones repo to /tmp and copies templates to ~/.pandoc/templates
 
-curl 'https://raw.githubusercontent.com/ryangrose/easy-pandoc-templates/master/remote_install.sh' | bash
+curl 'https://raw.githubusercontent.com/ryangrose/easy-pandoc-templates/master/copy_templates.sh' | bash
 ```
 
 To install a single template, copy the given template to `~/.pandoc/templates`.

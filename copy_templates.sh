@@ -4,5 +4,5 @@ cd easy-pandoc-templates/html
 mkdir -p ~/.pandoc/templates
 for file in ./*.html; do
     [ -e "$file" ] || continue
-    cp $file ~/.pandoc/templates --no-clobber
+    cp -n $file ~/.pandoc/templates 
 done

@@ -1,0 +1,25 @@
+#/usr/bin/env bash
+
+if test -z "$1"
+then
+    echo "USAGE easydoc <file to convert> [OPTIONAL] <output file>"
+    exit 1
+fi
+easydoc_file=$1
+easydoc_template=$(ls ~/.pandoc/templates/ | fzf)
+if test -n "$2"
+then
+    easydoc_output=$2
+else
+    easydoc_file_base=$(basename "$easydoc_file")
+    easydoc_output_ext="${easydoc_template##*.}"
+    easydoc_filename="${easydoc_file_base%.*}"
+    easydoc_output="${easydoc_filename}.${easydoc_output_ext}"
+fi
+
+if test -n "$easydoc_template"
+then
+    echo "Writing ${easydoc_file} to ${easydoc_output}"
+    pandoc --toc --standalone --template="$easydoc_template" $easydoc_file -o $easydoc_output
+    echo "Done"
+fi

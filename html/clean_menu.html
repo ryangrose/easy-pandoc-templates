@@ -103,6 +103,12 @@ $endfor$
       </div>
       $endif$
       <div class="col-$if(toc)$9$else$12$endif$">
+
+      $if(abstract)$
+          <H1>$abstract-title$</H1>
+          $abstract$
+      $endif$
+
       $for(include-before)$
       $include-before$
       $endfor$
